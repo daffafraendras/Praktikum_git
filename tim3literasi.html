@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sistem Informasi Transparansi Keuangan Negara</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+  <!-- Navbar -->
+  <nav class="bg-blue-700 text-white p-4 flex justify-between items-center shadow">
+    <div class="font-bold text-lg">Logo Pemerintah</div>
+    <ul class="flex space-x-6">
+      <li><a href="#" class="hover:text-yellow-300">Dashboard</a></li>
+      <li><a href="#" class="hover:text-yellow-300">Data Real-Time</a></li>
+      <li><a href="#" class="hover:text-yellow-300">Laporan</a></li>
+      <li><a href="#" class="hover:text-yellow-300">Kontak</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="text-center py-16 bg-blue-100">
+    <h1 class="text-3xl md:text-5xl font-bold text-blue-800">Sistem Informasi Transparansi Keuangan Negara</h1>
+    <p class="mt-4 text-lg text-gray-700">Memantau anggaran dan realisasi secara real-time, transparan, dan mudah diakses.</p>
+  </section>
+
+  <!-- Dashboard Cards -->
+  <section class="max-w-6xl mx-auto p-6 grid grid-cols-1 md:grid-cols-4 gap-6">
+    <div class="bg-white p-6 rounded-lg shadow text-center">
+      <h3 class="text-gray-500">Total Anggaran</h3>
+      <p class="text-2xl font-bold text-blue-700">Rp 1.000 T</p>
+    </div>
+    <div class="bg-white p-6 rounded-lg shadow text-center">
+      <h3 class="text-gray-500">Realisasi Anggaran</h3>
+      <p class="text-2xl font-bold text-green-600">Rp 700 T</p>
+    </div>
+    <div class="bg-white p-6 rounded-lg shadow text-center">
+      <h3 class="text-gray-500">Sisa Anggaran</h3>
+      <p class="text-2xl font-bold text-red-600">Rp 300 T</p>
+    </div>
+    <div class="bg-white p-6 rounded-lg shadow text-center">
+      <h3 class="text-gray-500">Persentase</h3>
+      <p class="text-2xl font-bold text-yellow-600">70%</p>
+    </div>
+  </section>
+
+  <!-- Grafik Placeholder -->
+  <section class="max-w-5xl mx-auto p-6">
+    <h2 class="text-xl font-bold mb-4">Grafik Anggaran vs Realisasi</h2>
+    <div class="bg-white p-6 rounded-lg shadow">
+      <canvas id="chartAnggaran" height="100"></canvas>
+    </div>
+  </section>
+
+  <!-- Tabel Data -->
+  <section class="max-w-6xl mx-auto p-6">
+    <h2 class="text-xl font-bold mb-4">Data Real-Time Anggaran</h2>
+    <div class="overflow-x-auto bg-white rounded-lg shadow">
+      <table class="w-full text-left border-collapse">
+        <thead class="bg-blue-600 text-white">
+          <tr>
+            <th class="p-3">Kementerian</th>
+            <th class="p-3">Anggaran</th>
+            <th class="p-3">Realisasi</th>
+            <th class="p-3">Persentase</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="border-b">
+            <td class="p-3">Kementerian A</td>
+            <td class="p-3">Rp 200 T</td>
+            <td class="p-3">Rp 150 T</td>
+            <td class="p-3">75%</td>
+          </tr>
+          <tr class="border-b">
+            <td class="p-3">Kementerian B</td>
+            <td class="p-3">Rp 300 T</td>
+            <td class="p-3">Rp 200 T</td>
+            <td class="p-3">67%</td>
+          </tr>
+          <tr class="border-b">
+            <td class="p-3">Kementerian C</td>
+            <td class="p-3">Rp 150 T</td>
+            <td class="p-3">Rp 120 T</td>
+            <td class="p-3">80%</td>
+          </tr>
+          <tr class="border-b">
+            <td class="p-3">Kementerian D</td>
+            <td class="p-3">Rp 100 T</td>
+            <td class="p-3">Rp 70 T</td>
+            <td class="p-3">70%</td>
+          </tr>
+          <tr>
+            <td class="p-3">Kementerian E</td>
+            <td class="p-3">Rp 250 T</td>
+            <td class="p-3">Rp 160 T</td>
+            <td class="p-3">64%</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-blue-700 text-white text-center p-4 mt-8">
+    © 2025 Sistem Informasi Transparansi Keuangan Negara. All Rights Reserved.
+  </footer>
+
+  <!-- Script Chart.js -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script>
+    const ctx = document.getElementById('chartAnggaran').getContext('2d');
+    new Chart(ctx, {
+      type: 'bar',
+      data: {
+        labels: ['Kementerian A', 'Kementerian B', 'Kementerian C', 'Kementerian D', 'Kementerian E'],
+        datasets: [
+          {
+            label: 'Anggaran',
+            data: [200, 300, 150, 100, 250],
+            backgroundColor: 'rgba(54, 162, 235, 0.7)'
+          },
+          {
+            label: 'Realisasi',
+            data: [150, 200, 120, 70, 160],
+            backgroundColor: 'rgba(75, 192, 192, 0.7)'
+          }
+        ]
+      },
+      options: {
+        responsive: true,
+        plugins: {
+          legend: { position: 'top' }
+        }
+      }
+    });
+  </script>
+
+</body>
+</html>
