@@ -19,8 +19,126 @@ nav ul { list-style: none; margin: 0; padding: 0; display: flex; justify-content
 nav ul li a { display: block; color: rgb(229, 229, 229); text-align: center; padding: 14px 16px; text-decoration: none; }
 nav ul li a:hover { background-color: #1b18d3; }
 main { padding: 2rem; }
+<<<<<<< HEAD
+section { border-bottom: 1px solid #3189e0; padding-bottom: 2rem; margin-bottom: 2rem; }
+h2 { color: #3333c4; }
+
+
+        /* Styling khusus untuk section pendapatan - membuatnya menarik */
+        #pendapatan h3 { color: #1a4db7; margin-top: 2rem; border-bottom: 2px solid #18a5cb; padding-bottom: 0.5rem; }
+        #pendapatan table { 
+            width: 100%; 
+            border-collapse: collapse; 
+            margin: 1rem 0; 
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1); 
+            border-radius: 8px; 
+            overflow: hidden; 
+        }
+        #pendapatan th, #pendapatan td { 
+            border: 1px solid #3189e0; 
+            padding: 12px; 
+            text-align: center; 
+            transition: background-color 0.3s; 
+        }
+        #pendapatan th { 
+            background-color: #dbe9ff; 
+            color: #1a4db7; 
+            font-weight: bold; 
+        }
+        #pendapatan tbody tr:hover { 
+            background-color: #f0f8ff; 
+        }
+        #pendapatan .chart-container { 
+            display: flex; 
+            justify-content: space-around; 
+            margin: 1rem 0; 
+            flex-wrap: wrap; 
+        }
+        #pendapatan .bar { 
+            display: flex; 
+            flex-direction: column; 
+            align-items: center; 
+            margin: 0 1rem; 
+            min-width: 80px; 
+        }
+        #pendapatan .bar-label { font-weight: bold; color: #3333c4; margin-bottom: 0.5rem; }
+        #pendapatan .bar-fill { 
+            height: 20px; 
+            background: linear-gradient(to right, #322bfb, #18a5cb); 
+            border-radius: 10px; 
+            transition: width 0.5s ease; 
+        }
+        #pendapatan .pajak-bar { background: linear-gradient(to right, #4CAF50, #45a049); width: 75%; } /* Proporsi pajak ~75% */
+        #pendapatan .pnbp-bar { background: linear-gradient(to right, #FF9800, #F57C00); width: 25%; } /* Proporsi PNBP ~25% */
+        #pendapatan .total-summary { 
+            background-color: #f0f8ff; 
+            padding: 1rem; 
+            border-left: 4px solid #18a5cb; 
+            margin: 1rem 0; 
+            border-radius: 4px; 
+
+            
+         /* Styling khusus untuk section APBN - mirip dengan pendapatan untuk konsistensi */
+        #apbn h3 { color: #1a4db7; margin-top: 2rem; border-bottom: 2px solid #18a5cb; padding-bottom: 0.5rem; }
+        #apbn table { 
+            width: 100%; 
+            border-collapse: collapse; 
+            margin: 1rem 0; 
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1); 
+            border-radius: 8px; 
+            overflow: hidden; 
+        }
+        #apbn th, #apbn td { 
+            border: 1px solid #3189e0; 
+            padding: 12px; 
+            text-align: center; 
+            transition: background-color 0.3s; 
+        }
+        #apbn th { 
+            background-color: #dbe9ff; 
+            color: #1a4db7; 
+            font-weight: bold; 
+        }
+        #apbn tbody tr:hover { 
+            background-color: #f0f8ff; 
+        }
+        #apbn .chart-container { 
+            display: flex; 
+            justify-content: space-around; 
+            margin: 1rem 0; 
+            flex-wrap: wrap; 
+        }
+        #apbn .bar { 
+            display: flex; 
+            flex-direction: column; 
+            align-items: center; 
+            margin: 0 1rem; 
+            min-width: 80px; 
+        }
+        #apbn .bar-label { font-weight: bold; color: #3333c4; margin-bottom: 0.5rem; }
+        #apbn .bar-fill { 
+            height: 20px; 
+            background: linear-gradient(to right, #322bfb, #18a5cb); 
+            border-radius: 10px; 
+            transition: width 0.5s ease; 
+        }
+        #apbn .pendapatan-bar { background: linear-gradient(to right, #4CAF50, #45a049); width: 80%; } /* Contoh proporsi pendapatan vs belanja */
+        #apbn .belanja-bar { background: linear-gradient(to right, #FF9800, #F57C00); width: 100%; }
+        #apbn .defisit-bar { background: linear-gradient(to right, #f44336, #d32f2f); width: 30%; } /* Defisit sebagai selisih */
+        #apbn .total-summary { 
+            background-color: #f0f8ff; 
+            padding: 1rem; 
+            border-left: 4px solid #18a5cb; 
+            margin: 1rem 0; 
+            border-radius: 4px; 
+        }
+        #apbn .total-summary ul { list-style: none; padding: 0; }
+        #apbn .total-summary li { margin: 0.5rem 0; font-weight: bold; color: #1a4db7; }
+        }
+=======
 section { border-bottom: 1px solid #348be1; padding-bottom: 2rem; margin-bottom: 2rem; }
 h2 { color: #2929d8; }
+>>>>>>> c9b2f6e8fa552864f2afc9dac79113c744e61def
 </style>           
 </head>
 <body>
@@ -40,10 +158,85 @@ h2 { color: #2929d8; }
     </ul>
 </nav>
 
-<main>
-    <section id="apbn">
+ <section id="apbn">
         <h2>Data APBN (Anggaran Pendapatan dan Belanja Negara)</h2>
         <p>Menyajikan data ringkas mengenai Anggaran Pendapatan dan Belanja Negara dari tahun ke tahun. Informasi ini mencakup total pendapatan, total belanja, dan angka defisit anggaran. Sumber utama pendapatan negara, yaitu pajak, juga disorot dalam data ini.</p>
+        
+        <h3>Ringkasan APBN per Tahun</h3>
+        <p>Data berikut menunjukkan total pendapatan (berdasarkan pajak dan PNBP), total belanja (termasuk belanja pegawai, infrastruktur, dan subsidi), serta defisit anggaran (selisih belanja - pendapatan, yang biasanya dibiayai melalui utang atau hibah). Semua angka dalam Triliun Rupiah.</p>
+        <table>
+            <thead>
+                <tr>
+                    <th>Tahun</th>
+                    <th>Total Pendapatan</th>
+                    <th>Total Belanja</th>
+                    <th>Defisit (Belanja - Pendapatan)</th>
+                    <th>% Defisit terhadap PDB</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>2020</td>
+                    <td>1.770</td>
+                    <td>2.500</td>
+                    <td>730</td>
+                    <td>5.7%</td>
+                </tr>
+                <tr>
+                    <td>2021</td>
+                    <td>1.912</td>
+                    <td>2.600</td>
+                    <td>688</td>
+                    <td>4.9%</td>
+                </tr>
+                <tr>
+                    <td>2022</td>
+                    <td>2.065</td>
+                    <td>2.800</td>
+                    <td>735</td>
+                    <td>4.5%</td>
+                </tr>
+                <tr>
+                    <td>2023</td>
+                    <td>2.218</td>
+                    <td>3.000</td>
+                    <td>782</td>
+                    <td>4.2%</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="chart-container">
+            <div class="bar">
+                <div class="bar-label">Pendapatan</div>
+                <div class="bar-fill pendapatan-bar"></div>
+                <div style="margin-top: 0.5rem; font-size: 0.9em;">~80% dari Belanja</div>
+            </div>
+            <div class="bar">
+                <div class="bar-label">Belanja</div>
+                <div class="bar-fill belanja-bar"></div>
+                <div style="margin-top: 0.5rem; font-size: 0.9em;">100%</div>
+            </div>
+            <div class="bar">
+                <div class="bar-label">Defisit</div>
+                <div class="bar-fill defisit-bar"></div>
+                <div style="margin-top: 0.5rem; font-size: 0.9em;">~30% dari Belanja</div>
+            </div>
+        </div>
+
+        <div class="total-summary">
+            <h4>Analisis Singkat APBN</h4>
+            <ul>
+                <li>2020: Defisit tinggi akibat pandemi COVID-19, dengan stimulus belanja besar untuk pemulihan ekonomi.</li>
+                <li>2021: Pemulihan bertahap, pendapatan naik 8% YoY, defisit menurun relatif.</li>
+                <li>2022: Fokus pada infrastruktur, belanja meningkat 7.7% YoY.</li>
+                <li>2023: Proyeksi pertumbuhan stabil, defisit terkendali di bawah 5% PDB.</li>
+            </ul>
+            <p style="margin-top: 1rem; font-style: italic; color: #666;"> </p>
+        </div>
+
+        <h3>Sorotan Sumber Pendapatan Utama (Pajak)</h3>
+        <p>Pajak menyumbang sekitar 75% dari total pendapatan APBN. Lihat detail lebih lanjut di <a href="#pendapatan">section Pendapatan Negara</a>.</p>
     </section>
 
     <hr>
