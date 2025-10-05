@@ -7,7 +7,13 @@
 <title>Portal Data Keuangan Negara</title>
 <style>
 body { font-family: sans-serif; margin: 0; }
-header { background-color: #0f08da; color: rgb(232, 231, 231); padding: 1rem; text-align: center; }
+header img {
+  display: block;
+  margin: 0 auto 10px;
+  max-width: 300px;
+  height: 100px;
+}
+header { background-color: #3c31d7; color: rgb(232, 231, 231); padding: 1rem; text-align: center; }
 nav { background-color: #12b6e4; }
 nav ul { list-style: none; margin: 0; padding: 0; display: flex; justify-content: center; }
 nav ul li a { display: block; color: rgb(229, 229, 229); text-align: center; padding: 14px 16px; text-decoration: none; }
@@ -20,6 +26,7 @@ h2 { color: #2929d8; }
 <body>
 
 <header>
+    <img src="logoPDKN-.png" alt="Logo Keuangan Negara" style="height: 100px; margin-bottom: 5px;">
     <h1>Portal Data Keuangan Negara</h1>
     <p>Transparansi Anggaran dan Keuangan untuk Publik</p>
 </header>
@@ -49,16 +56,84 @@ h2 { color: #2929d8; }
     <hr>
 
     <section id="lkpp">
-        <h2>Laporan Keuangan Pemerintah</h2>
-        <p>Menampilkan posisi keuangan pemerintah pusat yang mencakup total aset, liabilitas (kewajiban), dan ekuitas. Laporan ini memberikan potret kesehatan finansial negara pada akhir periode setiap tahunnya, sesuai dengan Standar Akuntansi Pemerintahan.</p>
-    </section>
+    <h2>Laporan Keuangan Pemerintah</h2>
+    <p>Laporan ini menyajikan posisi keuangan pemerintah pusat berdasarkan neraca akhir tahun. Data mencakup total aset, kewajiban, dan ekuitas, serta tren pertumbuhan fiskal.</p>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Tahun</th>
+                <th>Total Aset (Rp Triliun)</th>
+                <th>Kewajiban (Rp Triliun)</th>
+                <th>Ekuitas (Rp Triliun)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>2020</td>
+                <td>6.500</td>
+                <td>4.200</td>
+                <td>2.300</td>
+            </tr>
+            <tr>
+                <td>2021</td>
+                <td>6.800</td>
+                <td>4.400</td>
+                <td>2.400</td>
+            </tr>
+            <tr>
+                <td>2022</td>
+                <td>7.100</td>
+                <td>4.600</td>
+                <td>2.500</td>
+            </tr>
+            <tr>
+                <td>2023</td>
+                <td>7.400</td>
+                <td>4.750</td>
+                <td>2.650</td>
+            </tr>
+        </tbody>
+    </table>
+</section>
 
     <hr>
 
     <section id="lhkpn">
-        <h2>LHKPN (Laporan Harta Kekayaan Penyelenggara Negara)</h2>
-        <p>Menyediakan data Laporan Harta Kekayaan Penyelenggara Negara yang dilaporkan kepada Komisi Pemberantasan Korupsi (KPK). Informasi ini mencakup nama pejabat, lembaga, jabatan, dan total harta kekayaan sebagai wujud transparansi dan akuntabilitas para pejabat publik.</p>
-    </section>
+    <h2>LHKPN (Laporan Harta Kekayaan Penyelenggara Negara)</h2>
+    <p>LHKPN adalah instrumen transparansi yang wajib diisi oleh pejabat negara. Data berikut menunjukkan contoh laporan harta kekayaan yang telah dilaporkan ke KPK.</p>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Nama Pejabat</th>
+                <th>Lembaga</th>
+                <th>Jabatan</th>
+                <th>Total Kekayaan (Rp)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Andi Wijaya</td>
+                <td>Kementerian Keuangan</td>
+                <td>Direktur Jenderal</td>
+                <td>12.500.000.000</td>
+            </tr>
+            <tr>
+                <td>Siti Rahma</td>
+                <td>KPK</td>
+                <td>Komisioner</td>
+                <td>8.200.000.000</td>
+            </tr>
+            <tr>
+                <td>Budi Santoso</td>
+                <td>Kementerian Perhubungan</td>
+                <td>Staf Ahli</td>
+                <td>5.750.000.000</td>
+            </tr>
+        </tbody>
+    </table>
+</section>
 </main>
 </body>
 </html>
