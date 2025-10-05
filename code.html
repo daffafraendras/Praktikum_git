@@ -7,69 +7,14 @@
 <title>Portal Data Keuangan Negara</title>
 <style>
 body { font-family: sans-serif; margin: 0; }
-header { background-color: #322bfb; color: rgb(241, 249, 252); padding: 1rem; text-align: center; }
-nav { background-color: #18a5cb; }
+header { background-color: #0f08da; color: rgb(232, 231, 231); padding: 1rem; text-align: center; }
+nav { background-color: #12b6e4; }
 nav ul { list-style: none; margin: 0; padding: 0; display: flex; justify-content: center; }
-nav ul li a { display: block; color: rgb(226, 233, 240); text-align: center; padding: 14px 16px; text-decoration: none; }
-nav ul li a:hover { background-color: #3330bc; }
+nav ul li a { display: block; color: rgb(229, 229, 229); text-align: center; padding: 14px 16px; text-decoration: none; }
+nav ul li a:hover { background-color: #1b18d3; }
 main { padding: 2rem; }
-section { border-bottom: 1px solid #3189e0; padding-bottom: 2rem; margin-bottom: 2rem; }
-h2 { color: #3333c4; }
-
-
-        /* Styling khusus untuk section pendapatan - membuatnya menarik */
-        #pendapatan h3 { color: #1a4db7; margin-top: 2rem; border-bottom: 2px solid #18a5cb; padding-bottom: 0.5rem; }
-        #pendapatan table { 
-            width: 100%; 
-            border-collapse: collapse; 
-            margin: 1rem 0; 
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1); 
-            border-radius: 8px; 
-            overflow: hidden; 
-        }
-        #pendapatan th, #pendapatan td { 
-            border: 1px solid #3189e0; 
-            padding: 12px; 
-            text-align: center; 
-            transition: background-color 0.3s; 
-        }
-        #pendapatan th { 
-            background-color: #dbe9ff; 
-            color: #1a4db7; 
-            font-weight: bold; 
-        }
-        #pendapatan tbody tr:hover { 
-            background-color: #f0f8ff; 
-        }
-        #pendapatan .chart-container { 
-            display: flex; 
-            justify-content: space-around; 
-            margin: 1rem 0; 
-            flex-wrap: wrap; 
-        }
-        #pendapatan .bar { 
-            display: flex; 
-            flex-direction: column; 
-            align-items: center; 
-            margin: 0 1rem; 
-            min-width: 80px; 
-        }
-        #pendapatan .bar-label { font-weight: bold; color: #3333c4; margin-bottom: 0.5rem; }
-        #pendapatan .bar-fill { 
-            height: 20px; 
-            background: linear-gradient(to right, #322bfb, #18a5cb); 
-            border-radius: 10px; 
-            transition: width 0.5s ease; 
-        }
-        #pendapatan .pajak-bar { background: linear-gradient(to right, #4CAF50, #45a049); width: 75%; } /* Proporsi pajak ~75% */
-        #pendapatan .pnbp-bar { background: linear-gradient(to right, #FF9800, #F57C00); width: 25%; } /* Proporsi PNBP ~25% */
-        #pendapatan .total-summary { 
-            background-color: #f0f8ff; 
-            padding: 1rem; 
-            border-left: 4px solid #18a5cb; 
-            margin: 1rem 0; 
-            border-radius: 4px; 
-        }
+section { border-bottom: 1px solid #348be1; padding-bottom: 2rem; margin-bottom: 2rem; }
+h2 { color: #2929d8; }
 </style>           
 </head>
 <body>
@@ -94,126 +39,11 @@ h2 { color: #3333c4; }
         <p>Menyajikan data ringkas mengenai Anggaran Pendapatan dan Belanja Negara dari tahun ke tahun. Informasi ini mencakup total pendapatan, total belanja, dan angka defisit anggaran. Sumber utama pendapatan negara, yaitu pajak, juga disorot dalam data ini.</p>
     </section>
 
-    
     <hr>
 
     <section id="pendapatan">
         <h2>Data Pendapatan Negara</h2>
-       
-        <h3>Pendapatan dari Pajak</h3>
-        <p>Sumber utama dari Pajak Penghasilan (PPh), Pajak Pertambahan Nilai (PPN), dan Pajak Bumi & Bangunan (PBB), mencerminkan aktivitas ekonomi masyarakat dan bisnis.</p>
-        <table>
-            <thead>
-                <tr>
-                    <th>Tahun</th>
-                    <th>PPh</th>
-                    <th>PPN</th>
-                    <th>PBB</th>
-                    <th>Total Pajak</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>2020</td>
-                    <td>800</td>
-                    <td>500</td>
-                    <td>20</td>
-                    <td>1.320</td>
-                </tr>
-                <tr>
-                    <td>2021</td>
-                    <td>850</td>
-                    <td>550</td>
-                    <td>22</td>
-                    <td>1.422</td>
-                </tr>
-                <tr>
-                    <td>2022</td>
-                    <td>900</td>
-                    <td>600</td>
-                    <td>25</td>
-                    <td>1.525</td>
-                </tr>
-                <tr>
-                    <td>2023</td>
-                    <td>950</td>
-                    <td>650</td>
-                    <td>28</td>
-                    <td>1.628</td>
-                </tr>
-            </tbody>
-        </table>
-
-        <div class="chart-container">
-            <div class="bar">
-                <div class="bar-label">Pajak (Dominan)</div>
-                <div class="bar-fill pajak-bar"></div>
-                <div style="margin-top: 0.5rem; font-size: 0.9em;">~75% Total</div>
-            </div>
-        </div>
-
-        <h3>Pendapatan Negara Bukan Pajak (PNBP)</h3>
-        <p>Berasal dari Sumber Daya Alam (SDA seperti minyak & gas), dividen BUMN, dan biaya jasa pemerintah. Komposisi ini meningkat seiring harga komoditas.</p>
-        <table>
-            <thead>
-                <tr>
-                    <th>Tahun</th>
-                    <th>PNBP SDA</th>
-                    <th>Dividen BUMN</th>
-                    <th>PNBP Lainnya</th>
-                    <th>Total PNBP</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>2020</td>
-                    <td>200</td>
-                    <td>100</td>
-                    <td>150</td>
-                    <td>450</td>
-                </tr>
-                <tr>
-                    <td>2021</td>
-                    <td>220</td>
-                    <td>110</td>
-                    <td>160</td>
-                    <td>490</td>
-                </tr>
-                <tr>
-                    <td>2022</td>
-                    <td>250</td>
-                    <td>120</td>
-                    <td>170</td>
-                    <td>540</td>
-                </tr>
-                <tr>
-                    <td>2023</td>
-                    <td>280</td>
-                    <td>130</td>
-                    <td>180</td>
-                    <td>590</td>
-                </tr>
-            </tbody>
-        </table>
-
-        <div class="chart-container">
-            <div class="bar">
-                <div class="bar-label">PNBP (Pendukung)</div>
-                <div class="bar-fill pnbp-bar"></div>
-                <div style="margin-top: 0.5rem; font-size: 0.9em;">~25% Total</div>
-            </div>
-        </div>
-
-        <div class="total-summary">
-            <h4>Total Pendapatan Negara per Tahun (Pajak + PNBP)</h4>
-            <ul>
-                <li>2020: Rp 1.770 Triliun (Pemulihan awal pasca-pandemi)</li>
-                <li>2021: Rp 1.912 Triliun (+8% YoY)</li>
-                <li>2022: Rp 2.065 Triliun (+8% YoY)</li>
-                <li>2023: Rp 2.218 Triliun (+7.4% YoY)</li>
-            </ul>
-            <p style="margin-top: 1rem; font-style: italic; color: #666;"></p>
-        </div>
+        <p>Bagian ini merinci sumber-sumber pendapatan negara, yang terbagi menjadi dua kategori utama: pendapatan dari pajak dan pendapatan negara bukan pajak (non-pajak). Data ini memberikan gambaran yang lebih jelas tentang komposisi penerimaan negara setiap tahunnya.</p>
     </section>
 
     <hr>
